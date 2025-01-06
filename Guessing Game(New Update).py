@@ -1,3 +1,23 @@
+import sqlite3
+
+# Connect to the SQLite database (or create it if it doesn't exist)
+conn = sqlite3.connect('guessing_game.db')
+
+# Create a cursor object to interact with the database
+cursor = conn.cursor()
+
+# Create a table to store player progress
+cursor.execute('''
+CREATE TABLE IF NOT EXISTS game_progress (
+    player_name TEXT,
+    level INTEGER,
+    attempts_left INTEGER
+)
+''')
+
+# Commit the changes and close the connection
+conn.commit()
+
 import datetime
 from random import *
 import sqlite3
