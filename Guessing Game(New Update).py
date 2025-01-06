@@ -30,7 +30,7 @@ def load_progress(player):
     return result if result else (1, 5)
 # Main application window
 root = tk.Tk()
-root.title("Guessing Game")
+root.title("Guessing Game Lawal Lawal")
 root.geometry("400x300")
 
 # Variables
